@@ -1,0 +1,13 @@
+header {
+  align-items: center;
+  background-color: #3f51b5;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer);
+  padding: var(--spacer);
+}
+
+a {
+  color: inherit;
+}

@@ -1,0 +1,7 @@
+<h3>{{ user.name }}</h3>
+
+<address>
+  <a [href]="'mailto:' + user.email">{{ user.email }}</a><br>
+  <a [href]="'tel:' + user.phone">{{ user.phone }}</a><br>
+  <a [href]="'https://' + user.website" target="_blank">{{ 'https://' + user.website }}</a>
+</address>
