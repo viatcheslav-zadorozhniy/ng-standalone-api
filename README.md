@@ -46,6 +46,6 @@
 
 
 ## Demo
-- `yarn install` - initialize the project
+- `yarn install --frozen-lockfile` - initialize the project
 - `yarn start` - start the app wrapped with `NgModule` ([main.ts](src/main.ts))
 - `yarn start:standalone` - start the app without `NgModule` ([main-standalone.ts](src/main-standalone.ts))
