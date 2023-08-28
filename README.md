@@ -34,13 +34,13 @@
   - `importProvidersFrom()` - import providers from the specified `NgModule`s
 - Routing
   - `Route.loadComponent` - lazy-load standalone component
-  - `CanMatchFn` - guard function, replacement for `CanMatch` service
-  - `CanActivateFn` - guard function, replacement for `CanActivate` service
-  - `CanDeactivateFn` - guard function, replacement for `CanDeactivate` service
+  - `CanMatchFn` - guard function, a replacement for `CanMatch` service
+  - `CanActivateFn` - guard function, a replacement for `CanActivate` service
+  - `CanDeactivateFn` - guard function, a replacement for `CanDeactivate` service
 - Standalone
-  - `@Pipe({ standalone: true })` - do not need to be declared in an `NgModule`
-  - `@Directive({ standalone: true })` - do not need to be declared in an `NgModule`
-  - `@Component({ standalone: true })` - do not need to be declared in an `NgModule`
+  - `@Pipe({ standalone: true })` - do not need to be declared in a `NgModule`
+  - `@Directive({ standalone: true })` - do not need to be declared in a `NgModule`
+  - `@Component({ standalone: true })` - do not need to be declared in a `NgModule`
 - DI
   - `inject()` - injects a token from the currently active injector (supported in [injection context](https://angular.io/guide/dependency-injection-context))
 
