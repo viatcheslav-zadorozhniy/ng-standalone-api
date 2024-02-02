@@ -3,8 +3,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   standalone: true,
   templateUrl: './todo-v2.component.html',
-  styleUrls: ['./todo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'page-container'
+  },
 })
 export class TodoV2Component {
 }

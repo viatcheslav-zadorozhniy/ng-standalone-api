@@ -23,3 +23,8 @@ a {
     text-decoration: underline;
   }
 }
+
+.page-container {
+  display: block;
+  padding: var(--spacer);
+}

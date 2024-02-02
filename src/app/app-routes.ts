@@ -34,4 +34,9 @@ export const appRoutes: Routes = [
     path: 'admin',
     loadChildren: () => import('./pages/admin/routes'),
   },
+
+  {
+    path: 'ng-next',
+    loadComponent: () => import('./pages/ng-next'),
+  },
 ];
