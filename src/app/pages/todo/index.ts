@@ -1,1 +1,1 @@
-export { TodoComponent } from './todo.component';
+export { TodoComponent as default } from './todo.component';

@@ -7,36 +7,26 @@ export const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'about',
-  },
-
-  {
-    path: 'about',
     providers: [], // An array of providers to use for this route and its children.
-    loadComponent: () => import('./pages/about'), // Router automatically unwraps dynamic import() with default export.
+    loadComponent: () => import('./pages/home'), // Router automatically unwraps dynamic import() with default export.
   },
 
   // Utilize canMatch guard to switch routed components based on some conditions.
   {
     path: 'todo',
     canMatch: [ // Alternative to `canLoad` and `canActivate` guards.
-      () => inject(FeatureFlagsService).hasPermission('todo-v2')
+      () => inject(FeatureFlagsService).hasFeature('todo-v2')
     ],
     loadComponent: () => import('./pages/todo-v2'),
   },
   {
     path: 'todo',
-    loadComponent: () => import('./pages/todo').then(module => module.TodoComponent),
+    loadComponent: () => import('./pages/todo'),
   },
 
-  // Lazy loading many routes at once.
+  // Lazy loading routes.
   {
-    path: 'admin',
-    loadChildren: () => import('./pages/admin/routes'),
-  },
-
-  {
-    path: 'ng-next',
-    loadComponent: () => import('./pages/ng-next'),
+    path: 'users',
+    loadChildren: () => import('./pages/users/users-routes'),
   },
 ];

@@ -14,5 +14,4 @@ import { HeaderComponent } from './ui';
     RouterOutlet,
   ],
 })
-export class AppComponent {
-}
+export class AppComponent {}

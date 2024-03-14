@@ -1,6 +1,16 @@
 <header>
-  <a [routerLink]="'about'" [routerLinkActive]="'active-link'">About</a>
-  <a [routerLink]="'todo'" [routerLinkActive]="'active-link'">Todo</a>
-  <a [routerLink]="'admin'" [routerLinkActive]="'active-link'">Admin</a>
-  <a [routerLink]="'ng-next'" [routerLinkActive]="'active-link'">NG Next</a>
+  <nav>
+    @for (menuItem of menuItems; track $index) {
+      <a
+        [routerLink]="menuItem.link"
+        [routerLinkActive]="'active-link'"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >{{ menuItem.title }}</a>
+    }
+  </nav>
+
+  <div class="feature-toggler">
+    <span>Todo V2 is <b>{{ hasTodoV2Feature() ? 'on' : 'off' }}</b></span>
+    <a (click)="toggleTodoV2Feature()">Toggle</a>
+  </div>
 </header>

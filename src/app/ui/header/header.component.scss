@@ -1,13 +1,34 @@
+$header-spacer: .5rem;
+
 header {
   align-items: center;
   background-color: #3f51b5;
-  color: #fff;
+  color: #ffffffb3;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacer);
-  padding: var(--spacer);
+  justify-content: space-between;
+  padding-block: $header-spacer;
+  padding-inline: var(--spacer);
+}
+
+nav,
+.feature-toggler {
+  align-items: center;
+  display: flex;
+  gap: $header-spacer;
 }
 
 a {
-  color: inherit;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: $header-spacer;
+
+  &.active-link {
+    background-color: #0003;
+  }
+
+  &:hover {
+    background-color: #0006;
+  }
 }
